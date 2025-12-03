@@ -1,0 +1,13 @@
+{
+  "name": "kishore-builder",
+  "version": "1.0.0",
+  "description": "Premium Real Estate Website",
+  "scripts": {
+    "start": "npx --yes live-server --port=3000 --open=index.html",
+    "dev": "npx --yes live-server --port=3000 --open=index.html"
+  },
+  "keywords": ["real-estate", "website"],
+  "author": "Kishore BuildTech",
+  "license": "ISC"
+}
+

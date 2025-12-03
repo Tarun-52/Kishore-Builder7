@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Furnished Rentals - Kishore BuildTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'slate-deep': '#0f172a',
+                        'gold': '#d4a574',
+                        'gold-light': '#e8c9a8',
+                        'cream': '#faf8f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-cream text-slate-deep">
+    <!-- Navigation -->
+    <nav class="bg-slate-deep/95 backdrop-blur-lg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/Kishore BuildTech.png" alt="Kishore BuildTech Logo" class="h-14 w-auto">
+                    <span class="font-display text-2xl text-white">Kishore BuildTech</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="rent-property.html" class="text-white hover:text-gold transition-colors font-medium">Rentals</a>
+                    <a href="index.html#contact" class="text-white/80 hover:text-gold transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 bg-gradient-to-br from-slate-deep via-slate-800 to-slate-900">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-gold/70 mb-4">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>/</span>
+                <a href="rent-property.html" class="hover:underline">Rent</a>
+                <span>/</span>
+                <span class="text-gold">Premium</span>
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ LUXURY COLLECTION</span>
+            </div>
+            <h1 class="font-display text-4xl md:text-5xl text-white mb-4">Premium Furnished <span class="text-gold">Luxury Rentals</span></h1>
+            <p class="text-white/70 text-lg max-w-2xl mb-6">Experience the finest in luxury living with our handpicked collection of fully furnished premium homes. Move-in ready with designer interiors.</p>
+            <div class="flex items-center gap-6 text-white/60">
+                <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                    75+ Premium Properties
+                </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    ₹1L - ₹15L/month
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features -->
+    <section class="py-8 bg-gold/10 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 text-sm">
+                <span class="flex items-center gap-2 text-slate-deep">
+                    <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Designer Interiors
+                </span>
+                <span class="flex items-center gap-2 text-slate-deep">
+                    <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Premium Appliances
+                </span>
+                <span class="flex items-center gap-2 text-slate-deep">
+                    <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Housekeeping Included
+                </span>
+                <span class="flex items-center gap-2 text-slate-deep">
+                    <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Concierge Service
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Premium 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1453&q=80" 
+                             alt="Luxury Penthouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-slate-deep text-white text-xs px-3 py-1 rounded-full">Penthouse</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹4,50,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-deep/80 to-transparent p-4">
+                            <div class="flex gap-2">
+                                <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">Sea View</span>
+                                <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">Private Terrace</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Worli Sea Face, Mumbai</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Iconic Sea-View Penthouse</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 5 Beds</span>
+                            <span>🚿 5 Baths</span>
+                            <span>📐 6,500 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Private Pool</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Home Theatre</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Smart Home</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹13.5L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Designer Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-slate-deep text-white text-xs px-3 py-1 rounded-full">Villa</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹2,75,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Koramangala, Bangalore</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Designer 4BHK Villa</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 4 Baths</span>
+                            <span>📐 4,200 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Italian Marble</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Jacuzzi</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Garden</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹8.25L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Luxury Apartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-slate-deep text-white text-xs px-3 py-1 rounded-full">Apartment</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹1,85,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Golf Course Road, Gurgaon</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Ultra-Luxury 3BHK Apartment</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🚿 3 Baths</span>
+                            <span>📐 2,800 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Golf View</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Wine Cellar</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Study</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹5.55L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Serviced Apartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Serviced</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹1,25,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Jubilee Hills, Hyderabad</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Fully Serviced 2BHK Luxury</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 2 Beds</span>
+                            <span>🚿 2 Baths</span>
+                            <span>📐 1,800 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Daily Maid</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Cook Available</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Driver</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹3.75L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" 
+                             alt="Beach House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-cyan-500 text-white text-xs px-3 py-1 rounded-full">Beach House</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹5,00,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>ECR, Chennai</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Exclusive Beachfront Estate</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 6 Beds</span>
+                            <span>🚿 6 Baths</span>
+                            <span>📐 8,000 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Private Beach</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Infinity Pool</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Helipad</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹15L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Duplex" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-gold text-white text-xs px-3 py-1 rounded-full">✨ Premium</span>
+                            <span class="bg-slate-deep text-white text-xs px-3 py-1 rounded-full">Duplex</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-gold font-display text-xl font-semibold">₹2,20,000</span>
+                            <span class="text-slate-500 text-sm">/mo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Bandra West, Mumbai</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Celebrity-Style Duplex Apartment</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 4 Baths</span>
+                            <span>📐 3,500 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Double Height</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Walk-in Closet</span>
+                            <span class="bg-gold/10 text-gold text-xs px-2 py-1 rounded">Gym</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm">
+                                <span class="text-slate-400">Deposit:</span>
+                                <span class="text-slate-deep font-medium"> ₹6.6L</span>
+                            </div>
+                            <button class="bg-gold text-white px-5 py-2 rounded-lg hover:bg-gold-light hover:text-slate-deep transition-colors text-sm font-medium">Schedule Visit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-slate-deep to-slate-800">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-2xl md:text-3xl text-white mb-4">Looking for Something Extraordinary?</h2>
+            <p class="text-white/60 mb-6">Our luxury property consultants will curate exclusive options just for you</p>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-gold text-white px-8 py-3 rounded-full font-medium hover:bg-gold-light hover:text-slate-deep transition-all">
+                Get Personal Consultation
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/40 text-sm">© 2024 Kishore BuildTech. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="rent-property.html" class="text-white/40 hover:text-gold text-sm transition-colors">Back to Rentals</a>
+                    <a href="index.html" class="text-white/40 hover:text-gold text-sm transition-colors">Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

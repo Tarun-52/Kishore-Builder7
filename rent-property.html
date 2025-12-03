@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Property - Kishore BuildTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'slate-deep': '#0f172a',
+                        'gold': '#d4a574',
+                        'gold-light': '#e8c9a8',
+                        'cream': '#faf8f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .swiper { width: 100%; height: 100%; }
+        .swiper-pagination-bullet { background: #10b981 !important; }
+        .swiper-button-next, .swiper-button-prev { color: #10b981 !important; }
+    </style>
+</head>
+<body class="bg-cream text-slate-deep">
+    <!-- Navigation -->
+    <nav class="bg-slate-deep/95 backdrop-blur-lg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/Kishore BuildTech.png" alt="Kishore BuildTech Logo" class="h-14 w-auto">
+                    <span class="font-display text-2xl text-white">Kishore BuildTech</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="index.html#properties" class="text-white/80 hover:text-gold transition-colors">Properties</a>
+                    <a href="index.html#services" class="text-white hover:text-gold transition-colors font-medium">Services</a>
+                    <a href="index.html#about" class="text-white/80 hover:text-gold transition-colors">About</a>
+                    <a href="index.html#contact" class="text-white/80 hover:text-gold transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-gold text-white px-6 py-2.5 rounded-full hover:bg-gold-light hover:text-slate-deep transition-all font-medium">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-slate-deep rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-white/70 mb-4">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>/</span>
+                <span>Rent Property</span>
+            </div>
+            <h1 class="font-display text-4xl md:text-6xl text-white mb-6">Find Your Perfect <span class="text-slate-deep">Rental Home</span></h1>
+            <p class="text-white/90 text-lg max-w-2xl mb-8">Discover premium rental properties that match your lifestyle. From cozy apartments to luxurious villas, we have it all.</p>
+            
+            <!-- Search Box -->
+            <div class="bg-white rounded-2xl p-6 shadow-2xl max-w-4xl">
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="text-slate-500 text-sm mb-2 block">Location</label>
+                        <select class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-emerald-500">
+                            <option value="">Select City</option>
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                            <option>Bangalore</option>
+                            <option>Chennai</option>
+                            <option>Hyderabad</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-slate-500 text-sm mb-2 block">Property Type</label>
+                        <select class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-emerald-500">
+                            <option value="">All Types</option>
+                            <option>1 BHK</option>
+                            <option>2 BHK</option>
+                            <option>3 BHK</option>
+                            <option>4+ BHK</option>
+                            <option>Villa</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-slate-500 text-sm mb-2 block">Budget (Monthly)</label>
+                        <select class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-emerald-500">
+                            <option value="">Any Budget</option>
+                            <option>₹10K - ₹25K</option>
+                            <option>₹25K - ₹50K</option>
+                            <option>₹50K - ₹1L</option>
+                            <option>₹1L - ₹2L</option>
+                            <option>₹2L+</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Rentals Swiper Slider -->
+    <section class="py-16 bg-slate-deep">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-emerald-400 tracking-[0.3em] uppercase text-sm mb-4">Top Picks</p>
+                <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Featured Rental Properties</h2>
+                <p class="text-white/60 max-w-2xl mx-auto">Explore our handpicked selection of premium rental homes</p>
+            </div>
+            
+            <!-- Swiper -->
+            <div class="swiper rentSwiper" style="padding-bottom: 50px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                            <div class="relative h-64">
+                                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+                                <span class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm">Available Now</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-display text-xl text-slate-deep mb-2">Modern 3BHK Apartment</h3>
+                                <p class="text-slate-500 text-sm mb-3">📍 Bandra West, Mumbai</p>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                                    <span>🛏️ 3 Beds</span>
+                                    <span>🚿 2 Baths</span>
+                                    <span>📐 1,800 sqft</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t">
+                                    <p class="font-display text-2xl text-emerald-600">₹85,000<span class="text-sm text-slate-400">/month</span></p>
+                                    <button class="bg-slate-deep text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                            <div class="relative h-64">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+                                <span class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm">Premium</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-display text-xl text-slate-deep mb-2">Luxury Villa with Pool</h3>
+                                <p class="text-slate-500 text-sm mb-3">📍 Whitefield, Bangalore</p>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                                    <span>🛏️ 4 Beds</span>
+                                    <span>🚿 4 Baths</span>
+                                    <span>📐 4,500 sqft</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t">
+                                    <p class="font-display text-2xl text-emerald-600">₹2,50,000<span class="text-sm text-slate-400">/month</span></p>
+                                    <button class="bg-slate-deep text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                            <div class="relative h-64">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+                                <span class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Furnished</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-display text-xl text-slate-deep mb-2">Fully Furnished 2BHK</h3>
+                                <p class="text-slate-500 text-sm mb-3">📍 Cyber City, Gurgaon</p>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                                    <span>🛏️ 2 Beds</span>
+                                    <span>🚿 2 Baths</span>
+                                    <span>📐 1,200 sqft</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t">
+                                    <p class="font-display text-2xl text-emerald-600">₹65,000<span class="text-sm text-slate-400">/month</span></p>
+                                    <button class="bg-slate-deep text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                            <div class="relative h-64">
+                                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+                                <span class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Sea View</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-display text-xl text-slate-deep mb-2">Penthouse with Terrace</h3>
+                                <p class="text-slate-500 text-sm mb-3">📍 Marine Drive, Mumbai</p>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                                    <span>🛏️ 5 Beds</span>
+                                    <span>🚿 5 Baths</span>
+                                    <span>📐 6,000 sqft</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t">
+                                    <p class="font-display text-2xl text-emerald-600">₹5,00,000<span class="text-sm text-slate-400">/month</span></p>
+                                    <button class="bg-slate-deep text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                            <div class="relative h-64">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+                                <span class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm">Family Home</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-display text-xl text-slate-deep mb-2">Independent House</h3>
+                                <p class="text-slate-500 text-sm mb-3">📍 HSR Layout, Bangalore</p>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                                    <span>🛏️ 4 Beds</span>
+                                    <span>🚿 3 Baths</span>
+                                    <span>📐 3,200 sqft</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t">
+                                    <p class="font-display text-2xl text-emerald-600">₹1,20,000<span class="text-sm text-slate-400">/month</span></p>
+                                    <button class="bg-slate-deep text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Types -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl md:text-4xl text-slate-deep mb-4">Rental Categories</h2>
+                <p class="text-slate-500">Choose from a wide variety of rental options</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="apartments.html" class="bg-cream rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer group block">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500 transition-colors">
+                        <svg class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-slate-deep mb-2">Apartments</h3>
+                    <p class="text-slate-500 text-sm mb-3">1BHK to 4BHK options</p>
+                    <p class="text-emerald-600 font-semibold">₹15K - ₹2L/month</p>
+                    <p class="text-slate-400 text-xs mt-2">850+ Available</p>
+                    <span class="inline-flex items-center gap-1 text-emerald-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                        View All <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+                
+                <a href="villas.html" class="bg-cream rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer group block">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500 transition-colors">
+                        <svg class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-slate-deep mb-2">Villas</h3>
+                    <p class="text-slate-500 text-sm mb-3">Independent houses</p>
+                    <p class="text-emerald-600 font-semibold">₹50K - ₹5L/month</p>
+                    <p class="text-slate-400 text-xs mt-2">120+ Available</p>
+                    <span class="inline-flex items-center gap-1 text-emerald-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                        View All <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+                
+                <a href="commercial.html" class="bg-cream rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer group block">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500 transition-colors">
+                        <svg class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-slate-deep mb-2">Commercial</h3>
+                    <p class="text-slate-500 text-sm mb-3">Offices & retail spaces</p>
+                    <p class="text-emerald-600 font-semibold">₹30K - ₹10L/month</p>
+                    <p class="text-slate-400 text-xs mt-2">200+ Available</p>
+                    <span class="inline-flex items-center gap-1 text-emerald-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                        View All <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+                
+                <a href="premium-rentals.html" class="bg-cream rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer group block">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500 transition-colors">
+                        <svg class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-slate-deep mb-2">Premium Furnished</h3>
+                    <p class="text-slate-500 text-sm mb-3">Luxury ready homes</p>
+                    <p class="text-emerald-600 font-semibold">₹1L - ₹15L/month</p>
+                    <p class="text-slate-400 text-xs mt-2">75+ Available</p>
+                    <span class="inline-flex items-center gap-1 text-emerald-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                        View All <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Rentals -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="font-display text-3xl text-slate-deep mb-2">Featured Rental Properties</h2>
+                    <p class="text-slate-500">Hand-picked properties for you</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg text-sm font-medium">All</button>
+                    <button class="px-4 py-2 bg-white text-slate-600 rounded-lg text-sm font-medium hover:bg-emerald-50">Furnished</button>
+                    <button class="px-4 py-2 bg-white text-slate-600 rounded-lg text-sm font-medium hover:bg-emerald-50">Semi-Furnished</button>
+                    <button class="px-4 py-2 bg-white text-slate-600 rounded-lg text-sm font-medium hover:bg-emerald-50">Unfurnished</button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rental Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Apartment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-emerald-500 text-white text-sm px-3 py-1 rounded-full">Furnished</div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                            <span class="text-emerald-600">₹45,000</span>/mo
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Powai, Mumbai</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Premium 2BHK Apartment</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 2 Beds</span>
+                            <span>🚿 2 Baths</span>
+                            <span>📐 1,200 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Gym</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Pool</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Parking</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">24/7 Security</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm text-slate-500">
+                                <span class="text-slate-deep font-medium">Deposit:</span> ₹1.35L
+                            </div>
+                            <button class="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm font-medium">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rental Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-gold text-white text-sm px-3 py-1 rounded-full">Premium</div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                            <span class="text-emerald-600">₹1,75,000</span>/mo
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Whitefield, Bangalore</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Luxury 4BHK Villa</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 4 Baths</span>
+                            <span>📐 3,500 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Garden</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Modular Kitchen</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Servant Room</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm text-slate-500">
+                                <span class="text-slate-deep font-medium">Deposit:</span> ₹5.25L
+                            </div>
+                            <button class="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm font-medium">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rental Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Apartment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-blue-500 text-white text-sm px-3 py-1 rounded-full">Semi-Furnished</div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                            <span class="text-emerald-600">₹28,000</span>/mo
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-slate-500 text-sm mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Gurgaon, Delhi NCR</span>
+                        </div>
+                        <h3 class="font-display text-xl text-slate-deep mb-3">Spacious 3BHK Flat</h3>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🚿 2 Baths</span>
+                            <span>📐 1,650 sqft</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Metro Nearby</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Power Backup</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs px-2 py-1 rounded">Clubhouse</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="text-sm text-slate-500">
+                                <span class="text-slate-deep font-medium">Deposit:</span> ₹84K
+                            </div>
+                            <button class="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-sm font-medium">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center gap-2 border-2 border-emerald-500 text-emerald-600 px-8 py-3 rounded-full hover:bg-emerald-500 hover:text-white transition-all font-medium">
+                    View All Rentals
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Rent With Us -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl md:text-4xl text-slate-deep mb-4">Why Rent With Us?</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">We make renting easy, transparent, and hassle-free</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">Verified Properties</h3>
+                    <p class="text-slate-500 text-sm">Every property is personally verified for authenticity</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">Zero Brokerage*</h3>
+                    <p class="text-slate-500 text-sm">Save money with our zero brokerage policy on select properties</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">Rental Agreement</h3>
+                    <p class="text-slate-500 text-sm">Legal documentation and agreement support provided</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">Verified Owners</h3>
+                    <p class="text-slate-500 text-sm">Deal directly with verified property owners</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">24/7 Support</h3>
+                    <p class="text-slate-500 text-sm">Round-the-clock customer support for all queries</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-deep mb-2">Virtual Tours</h3>
+                    <p class="text-slate-500 text-sm">View properties from the comfort of your home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tenant Requirements -->
+    <section class="py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl text-slate-deep mb-6">Documents Required for Renting</h2>
+                    <p class="text-slate-500 mb-8">Keep these documents ready for a smooth rental process</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-emerald-600 font-semibold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-deep">Identity Proof</h4>
+                                <p class="text-slate-500 text-sm">Aadhar Card, PAN Card, Passport, or Voter ID</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-emerald-600 font-semibold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-deep">Address Proof</h4>
+                                <p class="text-slate-500 text-sm">Current address proof or previous rental agreement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-emerald-600 font-semibold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-deep">Income Proof</h4>
+                                <p class="text-slate-500 text-sm">Salary slips (3 months) or ITR for self-employed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-emerald-600 font-semibold">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-deep">Passport Photos</h4>
+                                <p class="text-slate-500 text-sm">Recent passport size photographs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-emerald-500 rounded-2xl p-8 text-white">
+                    <h3 class="font-display text-2xl mb-6">Looking for a Rental?</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:border-white">
+                        <input type="tel" placeholder="Phone Number" class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:border-white">
+                        <select class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white">
+                            <option value="" class="text-slate-deep">Preferred Location</option>
+                            <option class="text-slate-deep">Mumbai</option>
+                            <option class="text-slate-deep">Delhi NCR</option>
+                            <option class="text-slate-deep">Bangalore</option>
+                            <option class="text-slate-deep">Hyderabad</option>
+                            <option class="text-slate-deep">Chennai</option>
+                        </select>
+                        <select class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white">
+                            <option value="" class="text-slate-deep">Budget Range</option>
+                            <option class="text-slate-deep">₹10K - ₹25K</option>
+                            <option class="text-slate-deep">₹25K - ₹50K</option>
+                            <option class="text-slate-deep">₹50K - ₹1L</option>
+                            <option class="text-slate-deep">₹1L+</option>
+                        </select>
+                        <button type="submit" class="w-full bg-white text-emerald-600 py-4 rounded-lg font-semibold hover:bg-cream transition-all">
+                            Find Rentals For Me
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/40 text-sm">© 2024 Kishore BuildTech. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-white/40 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/40 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var rentSwiper = new Swiper(".rentSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    </script>
+</body>
+</html>
+
